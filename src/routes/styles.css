@@ -25,6 +25,7 @@ body {
   overflow: hidden !important;
   margin: 0;
   background-attachment: fixed;
+  user-select: none !important;
 }
 
 h1,
