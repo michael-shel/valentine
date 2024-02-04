@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { fade } from "svelte/transition";
   import Answer from "../components/Answer.svelte";
   import FallHearts from "../components/FallHearts.svelte";
   import PixelHeart from "../components/PixelHeart.svelte";
