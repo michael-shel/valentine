@@ -40,13 +40,7 @@
             data-share-method="host"
             data-aspect-ratio="1"
             data-width="130px"
-          >
-            <a
-              href="https://tenor.com/view/happy-dance-cat-cats-twerk-gif-12514617321696875437"
-              ></a
-            >
-            <a href="https://tenor.com/search/happy-stickers"></a>
-          </div>
+          ></div>
           <script
             type="text/javascript"
             async

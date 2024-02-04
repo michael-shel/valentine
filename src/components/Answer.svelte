@@ -29,7 +29,7 @@
     currentIndex = newIndex;
 
     replace = replaces[newIndex];
-    scale = scale >= 3 ? scale : scale + 0.1;
+    scale = scale >= 2 ? scale : scale + 0.1;
     descale = descale <= 0.4 ? descale : descale - 0.1;
   };
 </script>
@@ -38,18 +38,14 @@
   class="flex gap-8 justify-center items-center font-mono flex-wrap px-2 flex-col"
 >
   {#if runAnimation}
-    <div
-      class="tenor-gif-embed"
-      data-postid="1048494086190209289"
-      data-share-method="host"
-      data-aspect-ratio="1"
-      data-width="130px"
-      style="height: 130px !important;"
-    >
-      <a
-        href="https://tenor.com/view/cat-cats-tabby-cat-dance-dancing-gif-1048494086190209289"
-        ></a
-      >from <a href="https://tenor.com/search/cat-stickers"></a>
+    <div class="h-[130px]">
+      <div
+        class="tenor-gif-embed"
+        data-postid="1048494086190209289"
+        data-share-method="host"
+        data-aspect-ratio="1"
+        data-width="130px"
+      ></div>
     </div>
     <script
       type="text/javascript"
