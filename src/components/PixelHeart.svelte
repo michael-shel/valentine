@@ -1,16 +1,8 @@
 <script lang="ts">
   import { modal } from "./Modal.svelte";
   import Photo from "./Photo.svelte";
-  import { page } from "$app/stores";
 
   export let imageUrls: string[] = [];
-  function getImageUrl(name: string) {
-    return new URL(`./dir/${name}.png`, import.meta.url).href;
-  }
-
-  console.log(imageUrls);
-
-  console.log(getImageUrl(imageUrls[0]));
 
   const openPhoto = (url: string) => {
     modal.open(Photo, {
