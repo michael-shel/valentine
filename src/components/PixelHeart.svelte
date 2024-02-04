@@ -47,8 +47,8 @@
   .heart {
     grid-gap: 0.4rem;
     display: grid;
-    grid-template-columns: repeat(7, 3rem);
-    grid-template-rows: repeat(6, 3rem);
+    grid-template-columns: repeat(7, 2rem);
+    grid-template-rows: repeat(6, 2rem);
     max-height: 620px;
     padding-top: 5px;
     width: 100%;
