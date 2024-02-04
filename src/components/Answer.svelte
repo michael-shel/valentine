@@ -40,19 +40,19 @@
   class="flex gap-8 justify-center items-center font-mono flex-wrap px-2 flex-col"
 >
   {#if runAnimation}
-    <div class="h-[130px]" transition:fade>
-      <div
-        class="tenor-gif-embed"
-        data-postid="1048494086190209289"
-        data-share-method="host"
-        data-aspect-ratio="1"
-        data-width="130px"
+    <div
+      class="tenor-gif-embed"
+      data-postid="1048494086190209289"
+      data-share-method="host"
+      data-aspect-ratio="1"
+      data-width="130px"
+      style="height: 130px !important;"
+      transition:fade
+    >
+      <a
+        href="https://tenor.com/view/cat-cats-tabby-cat-dance-dancing-gif-1048494086190209289"
+        >Cat Cats Sticker</a
       >
-        <a
-          href="https://tenor.com/view/cat-cats-tabby-cat-dance-dancing-gif-1048494086190209289"
-          >Cat Cats Sticker</a
-        >
-      </div>
     </div>
   {:else}
     <button
