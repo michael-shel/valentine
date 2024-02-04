@@ -37,7 +37,7 @@
 </script>
 
 <div
-  class="flex gap-8 justify-center items-center font-mono flex-wrap px-8 flex-col"
+  class="flex gap-8 justify-center items-center font-mono flex-wrap px-2 flex-col"
 >
   {#if runAnimation}
     <div class="h-[130px]" transition:fade>
