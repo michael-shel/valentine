@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Cat from "$lib/images/cat-cats.gif";
+  import Cat from "$lib/images/cat-cats.png";
 
   export let runAnimation: boolean = false;
   let replace = "NO";

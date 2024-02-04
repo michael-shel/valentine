@@ -3,7 +3,7 @@
   import FallHearts from "../components/FallHearts.svelte";
   import PixelHeart from "../components/PixelHeart.svelte";
   import Loading from "../components/loading/Loading.svelte";
-  import Cat from "$lib/images/happy-dance.gif";
+  import Cat from "$lib/images/happy-dance.png";
 
   export let data;
 
@@ -26,7 +26,7 @@
   <FallHearts />
 {/if}
 
-{#await Promise.all([imagePaths, delay(Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000)])}
+{#await Promise.all( [imagePaths, delay(Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000)] )}
   <Loading />
 {:then [imagePaths]}
   <div
@@ -34,9 +34,10 @@
   >
     <div class="flex items-center justify-center" style="height: 130px;">
       {#if runAnimation}
-        <img src={Cat} style="width: 130px; height: 130px" alt="dancing" />
+        <img src={Cat} style="width: 130px; height: 130px" alt="dancing"  />
       {:else}
-        <h1 class="text-black font-bold font-mono animate-charcter">
+        <h1 class="text-black font-bold font-mono">
+        <!-- <h1 class="text-black font-bold font-mono animate-charcter"> -->
           Will you be my Valentine?
         </h1>
       {/if}
