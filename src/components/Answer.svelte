@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { fade } from "svelte/transition";
+
   export let runAnimation: boolean = false;
   let replace = "NO";
   let replaces: string[] = [
@@ -38,17 +40,19 @@
   class="flex gap-8 justify-center items-center font-mono flex-wrap px-8 flex-col"
 >
   {#if runAnimation}
-    <div
-      class="tenor-gif-embed"
-      data-postid="1048494086190209289"
-      data-share-method="host"
-      data-aspect-ratio="1"
-      data-width="130px"
-    >
-      <a
-        href="https://tenor.com/view/cat-cats-tabby-cat-dance-dancing-gif-1048494086190209289"
-        >Cat Cats Sticker</a
+    <div class="h-[130px]" transition:fade>
+      <div
+        class="tenor-gif-embed"
+        data-postid="1048494086190209289"
+        data-share-method="host"
+        data-aspect-ratio="1"
+        data-width="130px"
       >
+        <a
+          href="https://tenor.com/view/cat-cats-tabby-cat-dance-dancing-gif-1048494086190209289"
+          >Cat Cats Sticker</a
+        >
+      </div>
     </div>
   {:else}
     <button

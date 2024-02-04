@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fade } from "svelte/transition";
   import Answer from "../components/Answer.svelte";
   import FallHearts from "../components/FallHearts.svelte";
   import PixelHeart from "../components/PixelHeart.svelte";
@@ -33,24 +34,27 @@
   >
     <div class="flex items-center justify-center" style="height: 130px;">
       {#if runAnimation}
-        <div
-          class="tenor-gif-embed"
-          data-postid="12514617321696875437"
-          data-share-method="host"
-          data-aspect-ratio="1"
-          data-width="130px"
-        >
-          <a
-            href="https://tenor.com/view/happy-dance-cat-cats-twerk-gif-12514617321696875437"
-            >Happy Dance Sticker</a
-          >from
-          <a href="https://tenor.com/search/happy-stickers">Happy Stickers</a>
+        <div class="h-[130px]"
+        transition:fade>
+          <div
+            class="tenor-gif-embed"
+            data-postid="12514617321696875437"
+            data-share-method="host"
+            data-aspect-ratio="1"
+            data-width="130px"
+          >
+            <a
+              href="https://tenor.com/view/happy-dance-cat-cats-twerk-gif-12514617321696875437"
+              >Happy Dance Sticker</a
+            >from
+            <a href="https://tenor.com/search/happy-stickers">Happy Stickers</a>
+          </div>
+          <script
+            type="text/javascript"
+            async
+            src="https://tenor.com/embed.js"
+          ></script>
         </div>
-        <script
-          type="text/javascript"
-          async
-          src="https://tenor.com/embed.js"
-        ></script>
       {:else}
         <h2 class="title">
           <span class="title-word title-word-1">Will</span>
@@ -101,7 +105,7 @@
   }
 
   .title-word-5 {
-    --color-2: #eb9ff5;
+    --color-3: #e4a9a8;
     --color-2: #ff4428;
     --color-3: #85ba94;
   }
@@ -134,5 +138,6 @@
     font-weight: 800;
     font-size: 32px;
     text-transform: uppercase;
+    text-align: center;
   }
 </style>
