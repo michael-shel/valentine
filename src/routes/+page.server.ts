@@ -8,7 +8,7 @@ export async function load() {
 
     const loadImages = async () => {
 
-        const imagesFolder = 'src/lib/images/photos'; // Update with your actual folder path
+        const imagesFolder = 'static/photos'; // Update with your actual folder path
 
         await delay(Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000);
 

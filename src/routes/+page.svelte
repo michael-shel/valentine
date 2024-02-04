@@ -3,7 +3,6 @@
   import FallHearts from "../components/FallHearts.svelte";
   import PixelHeart from "../components/PixelHeart.svelte";
   import Loading from "../components/loading/Loading.svelte";
-  import Cat from "$lib/images/happy-dance.png";
 
   export let data;
 
@@ -34,12 +33,32 @@
   >
     <div class="flex items-center justify-center" style="height: 130px;">
       {#if runAnimation}
-        <img src={Cat} style="width: 130px; height: 130px" alt="dancing"  />
+        <div
+          class="tenor-gif-embed"
+          data-postid="12514617321696875437"
+          data-share-method="host"
+          data-aspect-ratio="1"
+          data-width="130px"
+        >
+          <a
+            href="https://tenor.com/view/happy-dance-cat-cats-twerk-gif-12514617321696875437"
+            >Happy Dance Sticker</a
+          >from
+          <a href="https://tenor.com/search/happy-stickers">Happy Stickers</a>
+        </div>
+        <script
+          type="text/javascript"
+          async
+          src="https://tenor.com/embed.js"
+        ></script>
       {:else}
-        <!-- <h1 class="text-black font-bold font-mono"> -->
-        <h1 class="text-black font-bold font-mono animate-charcter">
-          Will you be my Valentine?
-        </h1>
+        <h2 class="title">
+          <span class="title-word title-word-1">Will</span>
+          <span class="title-word title-word-2">you</span>
+          <span class="title-word title-word-3">be</span>
+          <span class="title-word title-word-4">my</span>
+          <span class="title-word title-word-5">Valentine?</span>
+        </h2>
       {/if}
     </div>
 
@@ -53,31 +72,67 @@
 {/await}
 
 <style lang="postcss">
-  .animate-charcter {
-    text-transform: uppercase;
-    background-image: linear-gradient(
-      -225deg,
-      #1b1b1b 0%,
-      #44107a 29%,
-      #ff1361 67%,
-      #fff800 100%
-    );
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 3s linear infinite;
-    display: inline-block;
-    font-size: 32px;
+  .title-word {
+    animation: color-animation 4s linear infinite;
   }
 
-  @keyframes textclip {
-    to {
-      background-position: 200% center;
+  .title-word-1 {
+    --color-1: #df8453;
+    --color-2: #3d8dae;
+    --color-3: #e4a9a8;
+  }
+
+  .title-word-2 {
+    --color-1: #dbad4a;
+    --color-2: #accfcb;
+    --color-3: #17494d;
+  }
+
+  .title-word-3 {
+    --color-1: #accfcb;
+    --color-2: #e4a9a8;
+    --color-3: #accfcb;
+  }
+
+  .title-word-4 {
+    --color-1: #3d8dae;
+    --color-2: #df8453;
+    --color-3: #e4a9a8;
+  }
+
+  .title-word-5 {
+    --color-2: #eb9ff5;
+    --color-2: #ff4428;
+    --color-3: #85ba94;
+  }
+
+  @keyframes color-animation {
+    0% {
+      color: var(--color-1);
     }
+    32% {
+      color: var(--color-1);
+    }
+    33% {
+      color: var(--color-2);
+    }
+    65% {
+      color: var(--color-2);
+    }
+    66% {
+      color: var(--color-3);
+    }
+    99% {
+      color: var(--color-3);
+    }
+    100% {
+      color: var(--color-1);
+    }
+  }
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    text-transform: uppercase;
   }
 </style>

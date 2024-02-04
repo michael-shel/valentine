@@ -1,6 +1,4 @@
 <script lang="ts">
-  import Cat from "$lib/images/cat-cats-speed.png";
-
   export let runAnimation: boolean = false;
   let replace = "NO";
   let replaces: string[] = [
@@ -40,11 +38,23 @@
   class="flex gap-8 justify-center items-center font-mono flex-wrap px-8 flex-col"
 >
   {#if runAnimation}
-    <img
-      src="{Cat}"
-      style="width: 130px; height: 130px"
-      alt="dancing"
-    />
+    <div
+      class="tenor-gif-embed"
+      data-postid="1048494086190209289"
+      data-share-method="host"
+      data-aspect-ratio="1"
+      data-width="130px"
+    >
+      <a
+        href="https://tenor.com/view/cat-cats-tabby-cat-dance-dancing-gif-1048494086190209289"
+        >Cat Cats Sticker</a
+      >from <a href="https://tenor.com/search/cat-stickers">Cat Stickers</a>
+    </div>
+    <script
+      type="text/javascript"
+      async
+      src="https://tenor.com/embed.js"
+    ></script>
   {:else}
     <button
       class="rounded-lg p-3 font-bold pulse-button"
