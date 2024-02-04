@@ -34,8 +34,7 @@
   >
     <div class="flex items-center justify-center" style="height: 130px;">
       {#if runAnimation}
-        <div class="h-[130px]"
-        transition:fade>
+        <div class="h-[130px]">
           <div
             class="tenor-gif-embed"
             data-postid="12514617321696875437"
@@ -45,9 +44,9 @@
           >
             <a
               href="https://tenor.com/view/happy-dance-cat-cats-twerk-gif-12514617321696875437"
-              >Happy Dance Sticker</a
-            >from
-            <a href="https://tenor.com/search/happy-stickers">Happy Stickers</a>
+              ></a
+            >
+            <a href="https://tenor.com/search/happy-stickers"></a>
           </div>
           <script
             type="text/javascript"
