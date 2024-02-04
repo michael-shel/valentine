@@ -29,7 +29,7 @@
   <Loading />
 {:then [imagePaths]}
   <div
-    class="h-screen max-h-[90vh] flex flex-col justify-evenly overflow-hidden"
+    class="h-[90vh] max-h-[90vh] flex flex-col justify-evenly overflow-hidden"
   >
     <div class="flex items-center justify-center" style="height: 130px;">
       {#if runAnimation}
