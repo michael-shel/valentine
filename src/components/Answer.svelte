@@ -48,13 +48,8 @@
       <a
         href="https://tenor.com/view/cat-cats-tabby-cat-dance-dancing-gif-1048494086190209289"
         >Cat Cats Sticker</a
-      >from <a href="https://tenor.com/search/cat-stickers">Cat Stickers</a>
+      >
     </div>
-    <script
-      type="text/javascript"
-      async
-      src="https://tenor.com/embed.js"
-    ></script>
   {:else}
     <button
       class="rounded-lg p-3 font-bold pulse-button"
