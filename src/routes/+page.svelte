@@ -30,14 +30,14 @@
   <Loading />
 {:then [imagePaths]}
   <div
-    class="container-pulse h-screen max-h-screen flex flex-col justify-evenly overflow-hidden"
+    class="h-screen max-h-screen flex flex-col justify-evenly overflow-hidden"
   >
     <div class="flex items-center justify-center" style="height: 130px;">
       {#if runAnimation}
         <img src={Cat} style="width: 130px; height: 130px" alt="dancing"  />
       {:else}
-        <h1 class="text-black font-bold font-mono">
-        <!-- <h1 class="text-black font-bold font-mono animate-charcter"> -->
+        <!-- <h1 class="text-black font-bold font-mono"> -->
+        <h1 class="text-black font-bold font-mono animate-charcter">
           Will you be my Valentine?
         </h1>
       {/if}
@@ -53,22 +53,6 @@
 {/await}
 
 <style lang="postcss">
-  .container-pulse {
-    animation: 5s ease 0s infinite pulse;
-  }
-
-  @keyframes pulse {
-    0%,
-    50%,
-    100% {
-      background: #fee;
-    }
-    30%,
-    80% {
-      background: #fff;
-    }
-  }
-
   .animate-charcter {
     text-transform: uppercase;
     background-image: linear-gradient(
