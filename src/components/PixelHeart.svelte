@@ -46,10 +46,10 @@
 
 <style lang="postcss">
   .heart {
-    grid-gap: 0.4rem;
+    grid-gap: 0.2rem;
     display: grid;
-    grid-template-columns: repeat(7, 2rem);
-    grid-template-rows: repeat(6, 2rem);
+    grid-template-columns: repeat(7, 2.1rem);
+    grid-template-rows: repeat(6, 2.1rem);
     max-height: 630px;
     padding-top: 10px;
     width: 100%;
@@ -59,6 +59,7 @@
 
   @media (min-width: 32em) {
     .heart {
+      grid-gap: 0.4rem;
       grid-template-columns: repeat(7, 4rem);
       grid-template-rows: repeat(6, 4rem);
     }
@@ -66,6 +67,7 @@
 
   @media (min-width: 45em) {
     .heart {
+      grid-gap: 0.4rem;
       grid-template-columns: repeat(7, 5rem);
       grid-template-rows: repeat(6, 5rem);
     }
