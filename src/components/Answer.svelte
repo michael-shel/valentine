@@ -46,7 +46,6 @@
         autoplay
         preload="auto"
         muted
-        controls={false}
         class="h-[130px]"
       ></video>
     </div>
