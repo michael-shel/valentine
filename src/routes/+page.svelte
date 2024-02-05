@@ -34,7 +34,7 @@
     <div class="flex items-center justify-center" style="height: 130px;">
       {#if runAnimation}
         <div class="h-[130px]">
-          <video src="{Cat}" loop autoplay preload="auto" muted class="h-[130px]"></video>
+          <video src="{Cat}" playsinline loop autoplay preload="auto" muted class="h-[130px]"></video>
         </div>
       {:else}
         <h2 class="title">

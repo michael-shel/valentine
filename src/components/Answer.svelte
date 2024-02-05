@@ -42,6 +42,7 @@
     <div class="h-[130px]">
       <video
         src={Cat}
+        playsinline
         loop
         autoplay
         preload="auto"
