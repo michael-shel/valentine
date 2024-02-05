@@ -37,7 +37,8 @@
       class="item"
       class:!opacity-0={isHidden(index + 1)}
       class:cursor-pointer={!isHidden(index + 1)}
-      on:click={() => (!isHidden(index + 1) ? openPhoto('photos/'+imageUrl) : false)}
+      on:click={() =>
+        !isHidden(index + 1) ? openPhoto("photos/" + imageUrl) : false}
       style={`background-image: url(photos/${imageUrl});`}
     ></div>
   {/each}
@@ -77,8 +78,9 @@
     outline-offset: -3px;
   }
 
-  .item:hover {
-    @apply scale-110 transition-all;
+  .heart > .item:hover {
+    transition: 200ms;
+    scale: 1.1 !important;
   }
 
   .item:after {
@@ -91,5 +93,47 @@
     width: 100%;
     background: #ff748c;
     mix-blend-mode: overlay;
+  }
+
+  @keyframes waveAnimation {
+    0% {
+      transform: scale(1);
+    }
+    7% {
+      transform: scale(1.1);
+    }
+    20% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .item {
+    animation: waveAnimation 7s infinite;
+  }
+
+  .heart > .item:nth-child(7n + 1) {
+    animation-delay: 0s;
+  }
+  .heart > .item:nth-child(7n + 2) {
+    animation-delay: 0.1s;
+  }
+  .heart > .item:nth-child(7n + 3) {
+    animation-delay: 0.2s;
+  }
+
+  .heart > .item:nth-child(7n + 4) {
+    animation-delay: 0.3s;
+  }
+  .heart > .item:nth-child(7n + 5) {
+    animation-delay: 0.4s;
+  }
+  .heart > .item:nth-child(7n + 6) {
+    animation-delay: 0.5s;
+  }
+  .heart > .item:nth-child(7n + 7) {
+    animation-delay: 0.6s;
   }
 </style>
