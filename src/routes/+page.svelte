@@ -4,6 +4,7 @@
   import PixelHeart from "../components/PixelHeart.svelte";
   import Loading from "../components/loading/Loading.svelte";
   import Cat from "$lib/images/ezgif.com-gif-to-mp4-converter.mp4";
+  import Chip from "$lib/images/chipi-chapa.mp3";
   export let data;
 
   function delay(ms: number) {
@@ -23,6 +24,9 @@
 
 {#if runAnimation}
   <FallHearts />
+  <audio autoplay loop>
+    <source src="{Chip}" type="audio/mpeg" />
+  </audio>
 {/if}
 
 {#await Promise.all( [imagePaths, delay(Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000)] )}
@@ -34,7 +38,15 @@
     <div class="flex items-center justify-center" style="height: 130px;">
       {#if runAnimation}
         <div class="h-[130px]">
-          <video src="{Cat}" playsinline loop autoplay preload="auto" muted class="h-[130px]"></video>
+          <video
+            src={Cat}
+            playsinline
+            loop
+            autoplay
+            preload="auto"
+            muted
+            class="h-[130px]"
+          ></video>
         </div>
       {:else}
         <h2 class="title">

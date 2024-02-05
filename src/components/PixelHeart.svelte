@@ -50,8 +50,8 @@
     display: grid;
     grid-template-columns: repeat(7, 2rem);
     grid-template-rows: repeat(6, 2rem);
-    max-height: 620px;
-    padding-top: 5px;
+    max-height: 630px;
+    padding-top: 10px;
     width: 100%;
     justify-content: center;
     overflow: hidden;
