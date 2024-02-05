@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Cat from "$lib/images/cat-cats-ezgif.com-gif-to-mp4-converter.mp4";
   export let runAnimation: boolean = false;
   let replace = "NO";
   let replaces: string[] = [
@@ -39,19 +40,16 @@
 >
   {#if runAnimation}
     <div class="h-[130px]">
-      <div
-        class="tenor-gif-embed"
-        data-postid="1048494086190209289"
-        data-share-method="host"
-        data-aspect-ratio="1"
-        data-width="130px"
-      ></div>
+      <video
+        src={Cat}
+        loop
+        autoplay
+        preload="auto"
+        muted
+        controls={false}
+        class="h-[130px]"
+      ></video>
     </div>
-    <script
-      type="text/javascript"
-      async
-      src="https://tenor.com/embed.js"
-    ></script>
   {:else}
     <button
       class="rounded-lg p-3 font-bold pulse-button"

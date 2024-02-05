@@ -3,7 +3,7 @@
   import FallHearts from "../components/FallHearts.svelte";
   import PixelHeart from "../components/PixelHeart.svelte";
   import Loading from "../components/loading/Loading.svelte";
-
+  import Cat from "$lib/images/ezgif.com-gif-to-mp4-converter.mp4";
   export let data;
 
   function delay(ms: number) {
@@ -22,7 +22,7 @@
 </svelte:head>
 
 {#if runAnimation}
-  <!-- <FallHearts /> -->
+  <FallHearts />
 {/if}
 
 {#await Promise.all( [imagePaths, delay(Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000)] )}
@@ -34,18 +34,7 @@
     <div class="flex items-center justify-center" style="height: 130px;">
       {#if runAnimation}
         <div class="h-[130px]">
-          <div
-            class="tenor-gif-embed"
-            data-postid="12514617321696875437"
-            data-share-method="host"
-            data-aspect-ratio="1"
-            data-width="130px"
-          ></div>
-          <script
-            type="text/javascript"
-            async
-            src="https://tenor.com/embed.js"
-          ></script>
+          <video src="{Cat}" loop autoplay preload="auto" muted controls="{false}" class="h-[130px]"></video>
         </div>
       {:else}
         <h2 class="title">
