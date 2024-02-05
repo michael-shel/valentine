@@ -19,6 +19,10 @@
   color: var(--color-text);
 }
 
+* {
+  touch-action: manipulation !important;
+}
+
 body {
   min-height: 88vh;
   height: 88vh;
@@ -114,9 +118,9 @@ button:focus:not(:focus-visible) {
 
 @keyframes fall {
   from {
-	transform: translateY(0vh) translateX(-10vw);
+    transform: translateY(0vh) translateX(-10vw);
   }
   to {
-	transform: translateY(105vh) translateX(10vw);
+    transform: translateY(105vh) translateX(10vw);
   }
 }
