@@ -22,7 +22,7 @@
 </svelte:head>
 
 {#if runAnimation}
-  <FallHearts />
+  <!-- <FallHearts /> -->
 {/if}
 
 {#await Promise.all( [imagePaths, delay(Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000)] )}
