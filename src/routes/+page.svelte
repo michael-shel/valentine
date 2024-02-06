@@ -15,6 +15,15 @@
   $: ({ imagePaths } = data.streamed);
 
   let runAnimation: boolean = false;
+
+  let loading: boolean = true;
+
+  setTimeout(
+    () => {
+      loading = false;
+    },
+    Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000
+  );
 </script>
 
 <svelte:head>
@@ -25,13 +34,17 @@
 {#if runAnimation}
   <FallHearts />
   <audio autoplay loop>
-    <source src="{Chip}" type="audio/mpeg" />
+    <source src={Chip} type="audio/mpeg" />
   </audio>
 {/if}
 
-{#await Promise.all( [imagePaths, delay(Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000)] )}
+{#await imagePaths}
   <Loading />
-{:then [imagePaths]}
+{:then imagePaths}
+  {#if loading}
+    <Loading />
+  {/if}
+  
   <div
     class="h-[88vh] max-h-[88vh] flex flex-col justify-evenly overflow-hidden"
   >
