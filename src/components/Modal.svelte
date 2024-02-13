@@ -228,7 +228,7 @@
   .modal-open {
     pointer-events: auto;
     visibility: visible;
-    animation: modal-show 0.2s ease-in;
+    animation: modal-show 0.1s ease-in;
   }
 
   @keyframes modal-show {
