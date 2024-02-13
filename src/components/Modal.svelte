@@ -211,7 +211,7 @@
     max-width: none;
     justify-items: center;
     padding: 0px;
-    opacity: 0;
+    /* opacity: 0; */
     overscroll-behavior: contain;
     overscroll-behavior: contain;
     z-index: 999;
@@ -228,13 +228,22 @@
   .modal-open {
     pointer-events: auto;
     visibility: visible;
-    opacity: 1;
+    animation: modal-show 0.2s ease-in;
+  }
+
+  @keyframes modal-show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .modal:not(dialog:not(.modal-open)),
   .modal::backdrop {
     background-color: rgba(0, 0, 0, 0.3);
-    animation: modal-pop 0.2s ease-out;
+    /* animation: modal-pop 0.2s ease-out; */
   }
 
   .modal-open .modal-box,
