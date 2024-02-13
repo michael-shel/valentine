@@ -101,7 +101,7 @@
     0% {
       transform: scale(1);
     }
-    7% {
+    6% {
       transform: scale(1.1);
     }
     20% {
@@ -113,7 +113,7 @@
   }
 
   .item {
-    animation: waveAnimation 7s infinite;
+    animation: waveAnimation 6s infinite;
   }
 
   .heart > .item:nth-child(7n + 1) {

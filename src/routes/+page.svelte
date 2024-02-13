@@ -27,7 +27,7 @@
 </script>
 
 <svelte:head>
-  <title>Will you be</title>
+  <title>Will you be?</title>
   <meta name="description" content="Will you be my Valentine?" />
 </svelte:head>
 
@@ -111,7 +111,7 @@
   }
 
   .title-word-5 {
-    --color-3: #e4a9a8;
+    --color-1: #e4a9a8;
     --color-2: #ff4428;
     --color-3: #85ba94;
   }
