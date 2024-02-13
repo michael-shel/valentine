@@ -7,10 +7,6 @@
   import Chip from "$lib/images/chipi-chapa.mp3";
   export let data;
 
-  function delay(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
   let { imagePaths } = data.streamed;
   $: ({ imagePaths } = data.streamed);
 
